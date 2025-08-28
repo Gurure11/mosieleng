@@ -4,122 +4,419 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mosieleng Technical College</title>
-  <meta name="description" content="Mosieleng Technical College offers accredited courses in Business Studies, Computer Skills, Sports Management, Technical Matric, and more. Apply online today!">
-  <meta name="keywords" content="Mosieleng Technical College, Technical College South Africa, Computer Skills, Sports Management, Business Studies, Technical Matric, N Courses, Apply Online">
-  <meta name="author" content="Mosieleng Technical College">
-  <meta property="og:title" content="Mosieleng Technical College">
-  <meta property="og:description" content="Accredited Technical College – Explore courses in Business, Sports, Computer Skills, and more. Apply now!">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.mosielengtechnicalcollege.co.za/">
-  <meta property="og:image" content="https://www.mosielengtechnicalcollege.co.za/logo.png">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body { font-family: 'Arial', sans-serif; }
-    .hero { height: 80vh; }
-    .btn-green { background-color: #16a34a; color: white; padding: 10px 20px; border-radius: 8px; }
-    .btn-green:hover { background-color: #15803d; }
+    .swiper-container {
+      width: 100%;
+      height: 500px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-grid img {
+      transition: transform 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .course-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
-<body class="bg-gray-100">
-
-  <!-- Navbar -->
-  <header class="bg-green-700 text-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-green-900 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Mosieleng Technical College</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
-          <li class="relative group">
-            <a href="#" class="hover:text-yellow-300">Courses ▼</a>
-            <ul class="absolute hidden group-hover:block bg-white text-green-700 mt-2 rounded shadow-lg">
-              <li><a href="#computer" class="block px-4 py-2 hover:bg-green-100">Computer Skills</a></li>
-              <li><a href="#sports" class="block px-4 py-2 hover:bg-green-100">Sports Management</a></li>
-              <li><a href="#matric" class="block px-4 py-2 hover:bg-green-100">Technical Matric</a></li>
-              <li><a href="#business" class="block px-4 py-2 hover:bg-green-100">Business Studies</a></li>
+          <li><a href="#home" class="hover:text-green-300">Home</a></li>
+          <li><a href="#about" class="hover:text-green-300">About</a></li>
+          <li class="dropdown relative">
+            <a href="#courses" class="hover:text-green-300">Courses</a>
+            <ul class="dropdown-menu absolute hidden bg-green-800 text-white shadow-lg rounded mt-2">
+              <li><a href="#engineering" class="block px-4 py-2 hover:bg-green-700">Engineering Studies</a></li>
+              <li><a href="#computer" class="block px-4 py-2 hover:bg-green-700">Computer Skills</a></li>
+              <li><a href="#sports" class="block px-4 py-2 hover:bg-green-700">Sports Management</a></li>
+              <li><a href="#matric" class="block px-4 py-2 hover:bg-green-700">N3 Technical Matric</a></li>
+              <li><a href="#business" class="block px-4 py-2 hover:bg-green-700">Business Studies</a></li>
             </ul>
           </li>
-          <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+          <li><a href="#contact" class="hover:text-green-300">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="swiper mySwiper h-full">
+  <!-- Hero Section with Slider -->
+  <section id="home" class="relative">
+    <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://source.unsplash.com/1600x900/?college,students" class="w-full h-full object-cover"></div>
-        <div class="swiper-slide"><img src="https://source.unsplash.com/1600x900/?education,classroom" class="w-full h-full object-cover"></div>
-        <div class="swiper-slide"><img src="https://source.unsplash.com/1600x900/?graduation,success" class="w-full h-full object-cover"></div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/1200x500?text=Students+Learning" alt="Students Learning">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white text-center">Unlock Your Potential with Industry-Focused Education</h2>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/1200x500?text=Campus+Life" alt="Campus Life">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white text-center">Transform Your Future with Practical Skills</h2>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/1200x500?text=Graduation" alt="Graduation">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white text-center">Join Our Community of Success</h2>
+          </div>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-green-900">About Mosieleng Technical College</h2>
+      <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-8">
+        Your Gateway to Practical Skills and Quality Education. Mosieleng Technical College is a premier institution dedicated to providing high-quality education and practical skills to empower students for the modern workforce. Our college offers a diverse range of programs designed to equip learners with industry-relevant knowledge and hands-on experience in their chosen fields.
+      </p>
+      <!-- Image Grid -->
+      <div class="image-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/400x300?text=Practical+Training" alt="Practical Training" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/400x300?text=Modern+Facilities" alt="Modern Facilities" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/400x300?text=Student+Success" alt="Student Success" class="w-full h-64 object-cover">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Courses Section -->
-  <section id="computer" class="container mx-auto p-6">
-    <h2 class="text-3xl font-bold text-green-700 mb-4">Computer Skills Courses</h2>
-    <p class="mb-4">The Computer Skills Course department offers specialized training programs designed to equip students with essential digital and administrative skills.</p>
-    <div class="grid grid-cols-2 gap-6">
-      <img src="https://source.unsplash.com/600x400/?computer,training" class="rounded-lg shadow-md">
-      <img src="https://source.unsplash.com/600x400/?office,technology" class="rounded-lg shadow-md">
-    </div>
-    <a href="#contact" class="btn-green mt-4 inline-block">Apply Now</a>
-  </section>
+  <section id="courses" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-green-900">Our Courses</h2>
 
-  <!-- Sports Management -->
-  <section id="sports" class="container mx-auto p-6 bg-white">
-    <h2 class="text-3xl font-bold text-green-700 mb-4">Sports Management</h2>
-    <p class="mb-4">The Sports Management Department provides students with the skills needed to plan, coordinate, and manage sporting events, corporate functions, and entertainment activities.</p>
-    <div class="grid grid-cols-2 gap-6">
-      <img src="https://source.unsplash.com/600x400/?sports,event" class="rounded-lg shadow-md">
-      <img src="https://source.unsplash.com/600x400/?stadium,management" class="rounded-lg shadow-md">
-    </div>
-    <a href="#contact" class="btn-green mt-4 inline-block">Apply Now</a>
-  </section>
-
-  <!-- Contact Page with Enrol Form -->
-  <section id="contact" class="container mx-auto p-6 bg-green-50">
-    <h2 class="text-3xl font-bold text-green-700 mb-4">Enroll Online</h2>
-    <form class="bg-white shadow-md rounded-lg p-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Full Name" class="p-3 border rounded w-full" required>
-        <input type="email" placeholder="Email Address" class="p-3 border rounded w-full" required>
-        <input type="text" placeholder="Phone Number" class="p-3 border rounded w-full" required>
-        <select class="p-3 border rounded w-full" required>
-          <option>Select Course</option>
-          <option>Computer Skills</option>
-          <option>Sports Management</option>
-          <option>Technical Matric</option>
-          <option>Business Studies</option>
-        </select>
+      <!-- Engineering Studies -->
+      <div id="engineering" class="mb-16">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">Engineering Studies (N1 - N6)</h3>
+        <p class="text-lg text-gray-700 mb-6">The Engineering Studies Department offers comprehensive training programs designed to equip students with technical knowledge and hands-on skills in various engineering fields. These courses provide a pathway to employment, apprenticeships, or further studies in engineering disciplines.</p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply Now</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Electrical+Engineering" alt="Electrical Engineering" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Electrical Engineering (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn electrical principles, circuits, and power systems.</li>
+              <li>Gain hands-on experience in wiring, fault-finding, and electrical installations.</li>
+              <li>Understand electrical maintenance, safety regulations, and industrial applications.</li>
+              <li>Prepares students for careers as electricians, electrical technicians, or further engineering studies.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Civil+Engineering" alt="Civil Engineering" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Civil Engineering (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Study construction methods, structural design, and material sciences.</li>
+              <li>Learn surveying, site planning, and project management principles.</li>
+              <li>Understand water supply systems, roads, and building infrastructure.</li>
+              <li>Suitable for careers in construction, urban development, and civil project management.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Mechanical+Engineering" alt="Mechanical Engineering" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Mechanical Engineering (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Gain knowledge in machine design, thermodynamics, and fluid mechanics.</li>
+              <li>Learn about industrial machinery, maintenance, and automation systems.</li>
+              <li>Develop skills in mechanical drafting and technical drawing.</li>
+              <li>Prepares students for roles in manufacturing, engineering workshops, and industrial maintenance.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Motor+Diesel+Mechanics" alt="Motor & Diesel Mechanics" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Motor & Diesel Mechanics (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn the fundamentals of motor vehicle and diesel engine mechanics.</li>
+              <li>Develop diagnostic, repair, and maintenance skills for vehicles and heavy machinery.</li>
+              <li>Understand fuel injection systems, engine performance, and vehicle electronics.</li>
+              <li>Career opportunities in automotive repair workshops, fleet maintenance, and transport industries.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Plumbing" alt="Plumbing" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Plumbing (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn plumbing installation, maintenance, and drainage systems.</li>
+              <li>Gain hands-on experience in pipefitting, water supply, and sanitation systems.</li>
+              <li>Understand plumbing regulations, blueprint reading, and safety protocols.</li>
+              <li>Ideal for careers in residential, commercial, and industrial plumbing.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Fitting+Turning" alt="Fitting & Turning" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Fitting & Turning (N1 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn precision machining, metal cutting, and shaping techniques.</li>
+              <li>Gain hands-on experience with lathes, milling machines, and grinding tools.</li>
+              <li>Understand blueprint reading, mechanical fitting, and manufacturing processes.</li>
+              <li>Prepares students for careers in engineering workshops, toolmaking, and production industries.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <textarea placeholder="Additional Information" class="p-3 border rounded w-full mt-4"></textarea>
-      <button type="submit" class="btn-green mt-4">Submit Application</button>
-    </form>
 
-    <!-- Contact Info -->
-    <div class="mt-8">
-      <p><strong>Phone:</strong> +27 71 234 5678</p>
-      <p><strong>Email:</strong> info@mosielengtechnicalcollege.co.za</p>
-      <p><strong>Address:</strong> Johannesburg, South Africa</p>
-      <div class="flex space-x-4 mt-2">
-        <a href="https://wa.me/27712345678" target="_blank">WhatsApp</a> |
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">TikTok</a>
+      <!-- Computer Skills -->
+      <div id="computer" class="mb-16">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">Computer Skills Course</h3>
+        <p class="text-lg text-gray-700 mb-6">The Computer Skills Course department offers specialized training programs designed to equip students with essential digital and administrative skills for various professional roles. These courses focus on practical computer literacy, office administration, and customer service to ensure graduates are workplace-ready.</p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply Now</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Computer+Clerk" alt="Computer Clerk" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Computer Clerk</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn fundamental and advanced computer operations.</li>
+              <li>Develop data entry, file management, and document processing skills.</li>
+              <li>Gain proficiency in office software such as Microsoft Word, Excel, and PowerPoint.</li>
+              <li>Understand digital record-keeping and administrative procedures.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Call+Centre+Operations" alt="Call Centre Operations" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Call Centre Operations</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Master effective telephone etiquette and customer service communication.</li>
+              <li>Learn call-handling techniques, including inbound and outbound call management.</li>
+              <li>Understand customer relationship management (CRM) systems.</li>
+              <li>Develop problem-solving and conflict-resolution skills for client interactions.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Office+Assistant" alt="Office Assistant" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Office Assistant</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Acquire clerical and administrative support skills.</li>
+              <li>Learn how to manage office correspondence, scheduling, and filing systems.</li>
+              <li>Develop organizational skills to assist with business operations.</li>
+              <li>Gain experience in basic bookkeeping and office workflow management.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Receptionist+Secretary" alt="Receptionist & Secretary" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Receptionist & Secretary</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Master front-desk operations and visitor management.</li>
+              <li>Learn professional communication and business correspondence.</li>
+              <li>Develop skills in appointment scheduling and office coordination.</li>
+              <li>Gain experience in handling confidential documents and executive support.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Receptionist+Stock+Controller" alt="Receptionist & Stock Controller" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Receptionist & Stock Controller</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Combine receptionist duties with inventory management skills.</li>
+              <li>Learn stock control, tracking, and inventory documentation.</li>
+              <li>Develop customer service skills for front-desk and supplier interactions.</li>
+              <li>Understand the use of stock management software for business operations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports Management -->
+      <div id="sports" class="mb-16">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">Sports Management</h3>
+        <p class="text-lg text-gray-700 mb-6">The Sports Management Department provides students with the skills needed to plan, coordinate, and manage sporting events, corporate functions, and entertainment activities. These courses prepare graduates for dynamic careers in the sports industry, event planning, and hospitality sectors.</p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply Now</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Sports+Events+Management" alt="CATHSSETA Sports Events Management" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">CATHSSETA Sports Events Management (Level 5)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn event planning, budgeting, and logistical coordination for sports events.</li>
+              <li>Gain expertise in sponsorship management, marketing, and media relations.</li>
+              <li>Understand sports facility management, athlete coordination, and event safety regulations.</li>
+              <li>Prepares students for roles in sports federations, event companies, and recreational organizations.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Events+Management" alt="Events Management" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Events Management (Level 4)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Develop skills in organizing corporate events, weddings, conferences, and exhibitions.</li>
+              <li>Learn how to manage event logistics, vendor coordination, and guest services.</li>
+              <li>Gain knowledge in event budgeting, marketing, and customer experience management.</li>
+              <li>Ideal for careers in hospitality, event planning agencies, and entertainment industries.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Sports+Management" alt="Sports Management" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Sports Management (Level 4 - Level 5)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn the business aspects of sports organizations, team management, and player development.</li>
+              <li>Gain knowledge in sports marketing, sponsorships, and public relations.</li>
+              <li>Understand facility operations, league administration, and athlete performance analysis.</li>
+              <li>Suitable for careers in professional sports teams, fitness centers, and sports academies.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- N3 Technical Matric -->
+      <div id="matric" class="mb-16">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">N3 Technical Matric</h3>
+        <p class="text-lg text-gray-700 mb-6">The Academic Programs Department is designed to help students achieve their educational goals by providing essential learning support, matric completion opportunities, and revision classes. These programs are ideal for students looking to improve their academic performance or obtain their matric certification.</p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply Now</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Matric+Re-write" alt="Matric Re-write" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Matric Re-write (Grade 12)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Tailored for students who want to improve their matric results and increase their career and study opportunities.</li>
+              <li>Covers all major subjects, including Mathematics, Physical Science, Life Sciences, Business Studies, and more.</li>
+              <li>Provides intensive exam preparation, revision materials, and tutoring support.</li>
+              <li>Suitable for individuals looking to meet the requirements for university or college admissions.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Revision+Classes" alt="Revision Classes" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Revision Classes (Grade 8 - 12)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Designed to provide extra academic support to high school students.</li>
+              <li>Covers all key subjects, including Mathematics, Science, Accounting, English, and Business Studies.</li>
+              <li>Focuses on exam techniques, study strategies, and problem-solving skills.</li>
+              <li>Ideal for students who want to improve their grades and build a strong academic foundation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Studies -->
+      <div id="business" class="mb-16">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">Business Studies (N4 - N6)</h3>
+        <p class="text-lg text-gray-700 mb-6">The Business & Management Studies Department provides students with essential administrative, managerial, and communication skills needed for various business environments. These programs equip graduates with both theoretical knowledge and practical expertise, preparing them for careers in corporate, public, and educational sectors.</p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Apply Now</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Management+Assistant" alt="Management Assistant" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Management Assistant (N4 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Develop strong administrative, organizational, and office management skills.</li>
+              <li>Learn business communication, professional writing, and meeting coordination.</li>
+              <li>Gain knowledge in office technology, record-keeping, and data management.</li>
+              <li>Suitable for careers as executive assistants, office managers, and administrative professionals.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Public+Management" alt="Public Management" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Public Management (N4 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn how government institutions and public services are managed.</li>
+              <li>Study public finance, policy implementation, and human resource management.</li>
+              <li>Understand the principles of governance, service delivery, and ethical leadership.</li>
+              <li>Prepares students for careers in government offices, municipalities, and non-profit organizations.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Public+Relations" alt="Public Relations" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Public Relations (N4 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Develop skills in corporate communication, media relations, and brand management.</li>
+              <li>Learn crisis communication, event planning, and marketing strategies.</li>
+              <li>Understand how to create and maintain a positive public image for organizations.</li>
+              <li>Ideal for careers in PR agencies, corporate communication, and marketing firms.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Medical+Secretary" alt="Medical Secretary" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Medical Secretary (N4 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Learn medical terminology, patient record management, and healthcare administration.</li>
+              <li>Develop skills in medical billing, appointment scheduling, and transcription.</li>
+              <li>Understand ethical considerations and confidentiality in healthcare settings.</li>
+              <li>Prepares students for roles in hospitals, medical practices, and healthcare institutions.</li>
+            </ul>
+          </div>
+          <div class="course-card bg-white rounded-lg shadow-lg p-4">
+            <img src="https://via.placeholder.com/400x200?text=Educare" alt="Educare" class="w-full h-40 object-cover rounded-t-lg">
+            <h4 class="text-xl font-bold mt-4">Educare (N4 - N6)</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Gain knowledge in child development, early childhood education, and classroom management.</li>
+              <li>Learn how to create educational programs and lesson plans for young children.</li>
+              <li>Understand child psychology, learning methodologies, and special education needs.</li>
+              <li>Ideal for careers in preschools, daycare centers, and early childhood development programs.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-green-900 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Start Your Journey</h2>
+      <p class="text-lg text-center max-w-3xl mx-auto mb-8">
+        Embark on a rewarding educational path at Mosieleng Technical College. Contact us today to learn more!
+      </p>
+      <div class="text-center">
+        <p><strong>Email:</strong> <a href="mailto:info@mosielengcollege.co.za" class="underline">info@mosielengcollege.co.za</a></p>
+        <p><strong>Phone:</strong> 0164284383</p>
+        <p><strong>Address:</strong> 29 Hofmeyer Av, Vereeniging 1939</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-tiktok fa-2x"></i></a>
+        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-instagram fa-2x"></i></a>
+      </div>
+      <p>&copy; 2025 Mosieleng Technical College. All rights reserved. Website created by Blinkiing Media.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: { el: ".swiper-pagination" },
-      autoplay: { delay: 3000 },
+    const swiper = new Swiper('.swiper-container', {
       loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+      },
     });
   </script>
 </body>
